@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="mb-5 text-center">
+    <img class="d-block mx-auto mb-4" src="" alt="" width="72" height="72">
+    <h2>Registration</h2>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam commodi optio reprehenderit voluptate numquam mollitia eaque iusto odio provident.</p>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-12">
+      <h4 class="mb-3">User Information</h4>
+      <form class="needs-validation" novalidate (submit)="onRegisterSubmit()">
+        <div class="mb-3">
+          <label for="name">Name</label>
+          <input [(ngModel)]="name" name="name" type="name" class="form-control" id="name" placeholder="Your Name">
+          <div class="invalid-feedback">
+            Please enter your name.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="username">Username</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+            </div>
+            <input [(ngModel)]="username" name="username" type="text" class="form-control" id="username" placeholder="Username" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              Your username is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+              <label for="email">Email</label>
+              <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for registering.
+              </div>
+            </div>
+
+        <div class="mb-3">
+          <label for="password">Password</label>
+          <input [(ngModel)]="password" name="password" type="password" class="form-control" id="password" placeholder="Enter Your Password">
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block mb-3" type="submit">Sign Up!!</button>
+      </form>
+    </div>
+  </div>
